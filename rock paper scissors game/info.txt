@@ -1,0 +1,64 @@
+user_choice = input("Rock, paper or scissors? (r/p/s)"). lower()
+after the line above we should validate the choice, like in a previous project we are going to call the lower method
+so the text will only be lowercase text
+
+if user_choice != "r" and user_choice != "p" and user_choice != "s":
+    print("Invalid choice!")
+
+!= means does NOT equal
+
+BUT this is not a very cleaver/professional way to implement this.
+We can store the list of valid choices in a list then check to see if the user's choice is in that list or not.
+
+choices = ["r", "p", "s"]
+user_choice = input("Rock, paper or scissors? (r/p/s)"). lower()
+if user_choice not in choices:
+    print("Invalid choice!")
+
+This code above is more concise and elegant
+choices = ["r", "p", "s"] but if you convert this line to the one under, because lists can be modified in the program with append or remove like choice.remove ("r")
+choices = ("r", "p", "s")
+then it becomes read only 
+
+random.choice() with this we can pass a list or a top hole like choices and let the computer choose one of the valid choices.
+
+f string stands for formatted.
+
+in python we have a data structure called a dictionary
+a dictionary is used to map a key to a value
+# key -> value
+so we can map the character R to the emoji of a Rock
+# "r" -> "🗿"
+
+to declare a dictionary you do:
+emojis = { "r": "🗿", "s":✂️, "p":📃}
+
+So the code now looks like this:
+emojis = { "r": "🗿", "s": "✂️", "p": "📃"}
+choices = ("r", "p", "s")
+user_choice = input("Rock, paper or scissors? (r/p/s): "). lower()
+if user_choice not in choices:
+    print("Invalid choice!")
+ 
+computer_choice = random.choice(choices)
+print(f"You chose {emojis[user_choice]}")
+print(f"Computer chose {emojis[user_choice]}")
+
+and now for dertemeting the winner 
+
+if user_choice == computer_choice:
+    print("Tie!")
+elif (
+    (user_choice == "r" and computer_choice == "s") or 
+    (user_choice == "s" and computer_choice == "p") or 
+    (user_choice == "p" and computer_choice == "r")):
+    print("You Win!")
+else:
+    print("You Lose!")
+
+    should_continue = input("Continue (y/n)").lower() 
+    At this line you can't use continue because CONTINUE is a reserved keyword in Python
+
+    print("Invalid choice!")
+        continue
+    and at this line we added continue for if you type a different letter than r,s,p you don't get an error.
