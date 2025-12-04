@@ -1,0 +1,2 @@
+Refactoring = Chaning the structure of the code without changing its funcitonality.
+Modularization = Breaking down a large program into smaller reusable parts called modules or functions.

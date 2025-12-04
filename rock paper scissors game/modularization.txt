@@ -1,21 +1,29 @@
-import random
+user_choice = input("Rock, paper or scissors? (r/p/s): "). lower()
+    if user_choice not in choices:
+        print("Invalid choice!")
+        continue
+These lines have a single responsibility.
+So we can put it all into one seperate function called user choice
 
-emojis = { "r": "🗿", "s": "✂️", "p": "📃" }
-choices = ("r", "p", "s")
-
-def get_user_choice():
+def get_user_choice(user_choice, computer_choice):
     while True:
         user_choice = input("Rock, paper or scissors? (r/p/s): "). lower()
         if user_choice in choices:
             return user_choice
         else:
             print("Invalid choice!")
-    
+
+and now for another function for the
+    print(f"You chose {emojis[user_choice]}")
+    print(f"Computer chose {emojis[computer_choice]}")
+
+called: 
 def display_choices(user_choice, computer_choice):
     
     print(f"You chose {emojis[user_choice]}")
     print(f"Computer chose {emojis[computer_choice]}")
-    
+
+and also for determining the winner function:
 def determine_winner(user_choice, computer_choice):
     
     if user_choice == computer_choice:
@@ -27,7 +35,8 @@ def determine_winner(user_choice, computer_choice):
         print("You Win!")
     else:
         print("You Lose!")
-        
+
+You can also do this with the whole loop logic.
 def play_game():
     while True:
         user_choice = get_user_choice()
@@ -42,4 +51,4 @@ def play_game():
         if should_continue == "n":
             break
         
-play_game()
+And at the end: play_game() So we can run the game
