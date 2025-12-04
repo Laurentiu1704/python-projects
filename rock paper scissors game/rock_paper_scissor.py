@@ -42,4 +42,3 @@ def play_game():
         if should_continue == "n":
             break
         
-play_game()

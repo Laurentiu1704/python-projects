@@ -1,0 +1,22 @@
+It is good practice to remove any white spaces around what the user types, for example:
+"https://pypi.org/project/qrcode/"
+"https://pypi.org/project/qrcode/ "
+If a user types it with a white space or without it we still want to have the same QR code generator.
+So the .strip() method gets rid of any white spaces around our data and filename.
+
+
+import qrcode
+
+data = input("Enter the text or URL: ").strip()
+filename = input("Enter the filename: ").strip()
+
+IN the qr code module -> qrcode
+create a QRCode object
+and set box_size to 10 and border to 4.
+These are just arbitrary values. And of course store in a var like qr.
+
+Next call data and pass data |  qr.add_data(data).
+Next fill the arguments for the image
+qr.make_image(fill_color="black", back_color="white")
+(Arguments are the fill color and back color)
+

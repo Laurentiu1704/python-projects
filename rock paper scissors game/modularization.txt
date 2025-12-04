@@ -52,3 +52,8 @@ def play_game():
             break
         
 And at the end: play_game() So we can run the game
+
+So with this refactioring we broke down our program into small reusable functions, each of these functions has only a few lines so if there
+is a bug in one of these functions we can only focus on those few lines.
+This is easier than reading and understand an entire script. 
+This is the benefit of modularizing an entire code.

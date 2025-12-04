@@ -62,8 +62,3 @@ else:
     print("Invalid choice!")
         continue
     and at this line we added continue for if you type a different letter than r,s,p you don't get an error.
-
-So with this refactioring we broke down our program into small reusable functions, each of these functions has only a few lines so if there
-is a bug in one of these functions we can only focus on those few lines.
-This is easier than reading and understand an entire script. 
-This is the benefit of modularizing an entire code.

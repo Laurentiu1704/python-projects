@@ -1,2 +1,6 @@
 Refactoring = Chaning the structure of the code without changing its funcitonality.
 Modularization = Breaking down a large program into smaller reusable parts called modules or functions.
+DRY principle = Don't Repeat Yourself
+Virtual Environment = Is like a seperate isolated workspace on your computer where you can install packages and run python project.
+                      Think of it as a clean organized room that's seperate from the rest of your house. 
+                      "For deactivating the venv just type 'deactivate' in the terminal"
