@@ -10,13 +10,18 @@ import qrcode
 data = input("Enter the text or URL: ").strip()
 filename = input("Enter the filename: ").strip()
 
-IN the qr code module -> qrcode
-create a QRCode object
-and set box_size to 10 and border to 4.
-These are just arbitrary values. And of course store in a var like qr.
 
-Next call data and pass data |  qr.add_data(data).
-Next fill the arguments for the image
-qr.make_image(fill_color="black", back_color="white")
-(Arguments are the fill color and back color)
+Next call data and pass data
 
+type(img)  # qrcode.image.pil.PilImage
+   - type() is a built-in Python function that returns the data type of an object
+   - In this case, it tells us that 'img' is a PilImage object
+   - The comment "# qrcode.image.pil.PilImage" shows the expected result
+   - This is just for reference/documentation; the line doesn't affect your code
+   - You can delete this line if you don't need it
+
+img.save(filename + ".png")
+   - .save() is a method that writes the QR code image to your computer
+   - filename + ".png" combines the user's filename with the .png extension
+   - Example: if user enters "mycode", this saves it as "mycode.png"
+   - The file is created in the same folder where your script is running
